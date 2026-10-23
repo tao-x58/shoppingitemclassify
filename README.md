@@ -38,3 +38,18 @@
 
 * 克隆仓库，打包完整项目Zip，发给HR。
 * 或者Fork项目（不要提PR），提交你的仓库链接，发给HR。
+
+## 已实现方案与复现
+
+字符级 TF-IDF + LinearSVC 的运行说明、评估设计、实验记录和局限见 [docs/IMPLEMENTATION.md](docs/IMPLEMENTATION.md)。
+
+交付材料阅读顺序：
+
+1. [技术报告](docs/方案.md)：分析因素、三方案选型、框架选择、流程优化、实现缺陷，以及仅作为设计的 BERT 微调和混合方案。
+2. [完整迭代记录](docs/ITERATIONS.md)：按问题、操作、证据和决策整理实际过程。
+3. [实验结果快照](docs/RESULTS.md)：三组线性模型参数实验、测试指标、错误分析和性能测量限制。
+4. [运行与验收说明](docs/IMPLEMENTATION.md)：命令、输入输出和复现方式。
+
+BERT、TextCNN 和混合方案没有实现或实测成绩；本轮补齐说明材料，不宣称已经完成模型微调或混合方案实验加分项。
+
+PowerShell 下在项目根目录执行 `.\scripts\verify.ps1`，完成依赖同步、功能测试、本地数据审计、训练、评估、分批预测一致性检查和性能测量；结果写入 `artifacts/acceptance/`。只运行功能测试可加 `-UnitOnly`。

@@ -8,3 +8,9 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Local runtime cache and generated experiment outputs
+.uv-cache/
+.pytest_cache/
+.pytest-tmp*/
+artifacts/
